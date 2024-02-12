@@ -1,0 +1,26 @@
+{{ define "auth-layout-content" }}
+<div class="flex w-[20rem] flex-col gap-4">
+  <div class="flex flex-col gap-3 text-center">
+    <h1 class="text-2xl font-semibold">Sign In</h1>
+    <p>Please fill in the form to sign in</p>
+  </div>
+
+  <form class="flex w-full flex-col gap-3.5">
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input id="email" type="email" />
+    </div>
+    <div class="form-row">
+      <label for="password">Password</label>
+      <input id="password" type="password" />
+    </div>
+
+    <button class="btn btn-primary">Sign In</button>
+  </form>
+
+  <div class="flex justify-between">
+    <p>Don't have an account?</p>
+    <a class="link" href="/auth/sign-up">Register</a>
+  </div>
+</div>
+{{end }}

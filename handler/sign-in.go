@@ -1,15 +1,15 @@
 package handler
 
 import (
+	"html/template"
 	"net/http"
-	"text/template"
 )
 
-func Home(w http.ResponseWriter, r *http.Request) {
+func SignIn(w http.ResponseWriter, r *http.Request) {
 	t := template.Must(template.ParseFiles(
 		"web/template/layout/root-layout.html",
-		"web/template/layout/header.html",
-		"web/template/home.html",
+		"web/template/auth/layout.html",
+		"web/template/auth/sign-in.html",
 	))
 	
 	if err := t.Execute(w, nil); err != nil {

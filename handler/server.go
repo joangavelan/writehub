@@ -11,6 +11,8 @@ func (s *Server) Start() error {
 	mux.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	mux.HandleFunc("/{$}", Home)
+	mux.HandleFunc("/auth/sign-in", SignIn)
+	mux.HandleFunc("/auth/sign-up", SignUp)
 
 	return http.ListenAndServe(":3000", mux)
 }

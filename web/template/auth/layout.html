@@ -1,0 +1,7 @@
+{{ define "body-content" }}
+<div class="relative grid h-screen place-items-center [&>div]:mb-10">
+  <a href="/" class="absolute left-14 top-14 underline"> &#x2190; Go Back </a>
+
+  {{ template "auth-layout-content" . }}
+</div>
+{{ end }}
